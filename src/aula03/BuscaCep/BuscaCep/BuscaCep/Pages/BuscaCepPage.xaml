@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BuscaCep.Pages.BuscaCepPage">
+    <!--<StackLayout Padding="esquerdo, topo, direito, inferior">-->
+    <!--<StackLayout Padding="horizontal, vertical">-->
+    <!--<StackLayout Padding="todas iguais">-->
+    <StackLayout Padding="5, 0"
+                 Spacing="5">
+
+        <Entry Text="{Binding CEPBusca}"
+               Placeholder="Informe o CEP" />
+
+        <Button Text="Buscar"
+                Command="{Binding BuscarCommand}" />
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}" />
+
+        <StackLayout Spacing="2"
+                     IsVisible="{Binding HasCep}">
+
+            <Label Text="CEP:"
+                   FontAttributes="Bold" />
+
+            <Label Text="{Binding CEP}" />
+        </StackLayout>
+
+        <StackLayout Spacing="2"
+                     IsVisible="{Binding HasCep}">
+
+            <Label Text="Logradouro:"
+                   FontAttributes="Bold" />
+
+            <Label Text="{Binding Logradouro}" />
+
+        </StackLayout>
+
+        <StackLayout Spacing="2"
+                     IsVisible="{Binding HasCep}">
+
+            <Label Text="Bairro:"
+                   FontAttributes="Bold" />
+
+            <Label Text="{Binding Bairro}" />
+
+        </StackLayout>
+
+        <StackLayout Spacing="2"
+                     IsVisible="{Binding HasCep}">
+
+            <Label Text="Localidade:"
+                   FontAttributes="Bold" />
+
+            <Label Text="{Binding Localidade}" />
+
+        </StackLayout>
+
+        <StackLayout Spacing="2"
+                     IsVisible="{Binding HasCep}">
+
+            <Label Text="UF:"
+                   FontAttributes="Bold" />
+
+            <Label Text="{Binding UF}" />
+
+        </StackLayout>
+
+        <Button Text="Buscar"
+                IsVisible="{Binding HasCep}"
+                Command="{Binding AdicionarCommand}" />
+        
+    </StackLayout>
+</ContentPage>
