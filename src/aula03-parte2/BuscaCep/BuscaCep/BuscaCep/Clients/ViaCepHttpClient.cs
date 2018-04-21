@@ -44,8 +44,6 @@ namespace BuscaCep.Clients
                 throw ex;
             }
         }
-
-
     }
 
 
