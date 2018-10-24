@@ -1,14 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.BuscaCep">
-  <uses-sdk android:minSdkVersion="15" />
-  <application android:label="BuscaCep.Android">
-    <provider android:name="android.support.v4.content.FileProvider"
-          android:authorities="com.companyname.BuscaCep.fileprovider"
-          android:exported="false"
-          android:grantUriPermissions="true">
-
-      <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-                       android:resource="@xml/file_paths"></meta-data>
-    </provider>
-  </application>
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="28" />
+	<application android:label="BuscaCep.Android">
+		<provider android:name="android.support.v4.content.FileProvider" android:authorities="com.companyname.BuscaCep.fileprovider" android:exported="false" android:grantUriPermissions="true">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
+		</provider>
+	</application>
 </manifest>
